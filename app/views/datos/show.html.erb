@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Genero:</b>
+  <%= @dato.genero %>
+</p>
+
+<p>
+  <b>Estatura:</b>
+  <%= @dato.estatura %>
+</p>
+
+<p>
+  <b>Unidades:</b>
+  <%= @dato.unidades %>
+</p>
+
+
+<%= link_to 'Edit', edit_dato_path(@dato) %> |
+<%= link_to 'Back', datos_path %>

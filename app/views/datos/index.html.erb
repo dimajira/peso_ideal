@@ -1,0 +1,27 @@
+<h1>Listing datos</h1>
+
+<table>
+  <tr>
+    <th>Genero</th>
+    <th>Estatura</th>
+    <th>Unidades</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @datos.each do |dato| %>
+  <tr>
+    <td><%= dato.genero %></td>
+    <td><%= dato.estatura %></td>
+    <td><%= dato.unidades %></td>
+    <td><%= link_to 'Show', dato %></td>
+    <td><%= link_to 'Edit', edit_dato_path(dato) %></td>
+    <td><%= link_to 'Destroy', dato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dato', new_dato_path %>
