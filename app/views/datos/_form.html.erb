@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :genero %><br />
-    <%= f.text_field :genero %>
+    <%= f.select :genero, :F  => "F", :M => "M"%>
   </div>
   <div class="field">
     <%= f.label :estatura %><br />
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :unidades %><br />
-    <%= f.text_field :unidades %>
+    <%= f.select :unidades, :Pulgadas=>"Pulgadas"%> 
   </div>
   <div class="actions">
     <%= f.submit %>

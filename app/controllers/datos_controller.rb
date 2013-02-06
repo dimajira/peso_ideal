@@ -3,7 +3,7 @@ class DatosController < ApplicationController
   # GET /datos.json
   def index
     @datos = Dato.all
-
+  
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @datos }

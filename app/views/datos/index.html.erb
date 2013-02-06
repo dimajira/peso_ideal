@@ -1,10 +1,11 @@
-<h1>Listing datos</h1>
+<h1>Lista de datos ingresados</h1>
 
 <table>
   <tr>
     <th>Genero</th>
     <th>Estatura</th>
     <th>Unidades</th>
+    <th>BMI</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,8 @@
     <td><%= dato.genero %></td>
     <td><%= dato.estatura %></td>
     <td><%= dato.unidades %></td>
+    <% base = dato.genero == "F" ? 101 : 110 %>
+    <td><%= base +5.06*(dato.estatura-60) %></td>
     <td><%= link_to 'Show', dato %></td>
     <td><%= link_to 'Edit', edit_dato_path(dato) %></td>
     <td><%= link_to 'Destroy', dato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
